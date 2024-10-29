@@ -1171,6 +1171,17 @@ ul {
   color: var(--text-color);
 }
 .p-h-text-icons{
-  font-size: 13px;
+  font-size: 12px;
 }
 /* end selector ox in the filter  */
+
+/* Start Hotel Page */
+.h-breadcrumb .breadcrumb-item a {
+  color: var(--dark-color);
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  color: var(--dark-color);
+}
+.gallary img{
+  padding-bottom: 20px;
+}
