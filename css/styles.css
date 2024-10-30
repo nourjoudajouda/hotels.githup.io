@@ -515,6 +515,7 @@ a {
   position: relative;
   box-shadow: 0px 0px 25px #e2e2e2;
 }
+/* End Popular Hotels */
 /* Start first know Section */
 .first-know .first-know-container {
   padding: 75px 16px;
@@ -1176,15 +1177,23 @@ ul {
 /* end selector ox in the filter  */
 
 /* Start Hotel Page */
+
+/* Start breadcrumb*/
 .h-breadcrumb .breadcrumb-item a {
   color: var(--dark-color);
 }
 .breadcrumb-item+.breadcrumb-item::before {
   color: var(--dark-color);
 }
+/* End breadcrumb */
+
+/* Start Gallary */
 .gallary img{
   padding-bottom: 20px;
 }
+/* End Gallary */
+
+/* Start Details Hotel */
 .rating span{
   letter-spacing: 1px;
 }
@@ -1209,4 +1218,119 @@ ul {
 }
 .feature-hotel h6{
   font-size: 14px;
+}
+.share-icon{
+  background-color: #f9f5eb;
+  padding: 5px;
+  border-radius: 5px;
+}
+/* End Details Hotel */
+
+
+/* Start suitable-option*/
+.suitable-option .card {
+  height: 570px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 25px #e2e2e2;
+}
+.features-room h6{
+  font-size: 14px;
+}
+/* End suitable-option */
+
+/* Start places */
+.places .input-group {
+  border-radius: 25px;
+  height: 50px;
+}
+/* End place */
+
+/* Start Collapse */
+.accordion-header{
+  background: #0082700D
+}
+.Questions .accordion-item .accordion-body {
+  color: #5B5B5BCC;
+}
+
+.Questions button{
+    display: flex;
+    justify-content: space-between;
+}
+/* End Collapse */
+
+.gallery {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-item {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
 }
