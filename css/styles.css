@@ -1185,3 +1185,28 @@ ul {
 .gallary img{
   padding-bottom: 20px;
 }
+.rating span{
+  letter-spacing: 1px;
+}
+.description-hotel p{
+  text-align: justify;
+}
+.feature-hotel{
+  background-color: #f9f5eb;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  height: 80px;
+}
+.search-hotel{
+    background-color: #f9f5eb;
+    min-height: 200px;
+    margin-top: 30px;
+    border: 2px solid #008270;
+    border-radius: 8px;
+    padding: 15px;
+
+}
+.feature-hotel h6{
+  font-size: 14px;
+}
