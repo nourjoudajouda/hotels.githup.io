@@ -11,8 +11,7 @@
         margin-top: 10px;
     }
     .popular-hotels .card {
-        min-height: 530px;
-        height: 530px;
+        min-height: 500px;
     }
     .breadcrumb {
         font-size: 16px;
