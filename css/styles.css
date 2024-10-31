@@ -191,7 +191,6 @@ a {
   right: 60px;
   transform: translateY(-50%);
   color: var(--white-color);
-  border: 1px solid var(--white-color);
   border-radius: 50%;
   padding: 5px;
   font-size: 40px;
@@ -241,7 +240,8 @@ a {
   height: 0.5em;
 }
 .navbar .navbar-toggler {
-  border-color: var(--white-color);
+  border-color: #c8a235;
+  background: #c8a235;
   cursor: pointer;
 }
 .navbar .navbar-toggler-icon {
@@ -1229,7 +1229,7 @@ ul {
 
 /* Start suitable-option*/
 .suitable-option .card {
-  height: 570px;
+  min-height: 570px;
   overflow: hidden;
   position: relative;
   box-shadow: 0px 0px 25px #e2e2e2;
@@ -1243,6 +1243,11 @@ ul {
 .places .input-group {
   border-radius: 25px;
   height: 50px;
+}
+.info-place{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 /* End place */
 
@@ -1258,8 +1263,43 @@ ul {
     display: flex;
     justify-content: space-between;
 }
+
+.e-q h4{
+  color: #c19617;
+}
+.e-q .input-group{
+  height: 70px;
+}
+
+.e-q input {
+  background-color: #00000014;
+  height: 70px;
+  opacity: 40%;
+  border-radius: 0px 10px 10px 0px !important;
+}
+.e-q .input-group-text {
+  border-radius: 10px 0px 0px 10px !important;
+}
+
+.accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: 0px;
+  margin-right: 0px;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+.btn-send {
+  background-color: var(--main-color) !important;
+  color: var(--white-color) !important;
+}
 /* End Collapse */
 
+/* Start preview Images */
 .gallery {
   display: flex;
   gap: 10px;
@@ -1291,16 +1331,18 @@ ul {
   position: relative;
   margin: auto;
   padding: 20px;
-  max-width: 800px;
+  max-width: 80%;
 }
 
 .mySlides {
   display: none;
+  text-align: center;
 }
 
-img {
+.mySlides  img {
   max-width: 100%;
   height: auto;
+  width: 70%;
 }
 
 .close {
@@ -1325,6 +1367,7 @@ img {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  transform: rotate(180deg);
 }
 
 .prev {
