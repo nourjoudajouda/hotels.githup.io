@@ -141,7 +141,13 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  flex: 0 0 25%;
+  flex: 0 0 20%;
+  font-size: 12px;
+ 
+font-weight: 400;
+line-height: 20.61px;
+text-align: left;
+
 }
 .hotel-card .buttons{
   display: flex;
@@ -346,6 +352,56 @@ background: rgba(193, 150, 23,0.3);
   color:  #008270;
   border: 0.25px solid rgba(0, 130, 112,0.3) !important;
 }
+.hotel-pagination{
+  display: flex;
+  justify-content: center;
+}
+.hotel-pagination .pagination .page-link {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    border: 1px solid #22222214
+}
+
+.hotel-pagination .pagination .page-link:hover {
+    background-color: #f5f5f5;
+}
+
+.hotel-pagination .pagination .page-item.active .page-link {
+    background-color: #C19617;
+;
+    border-color: #C19617;
+;
+    color: white;
+}
+
+.hotel-pagination .pagination .page-item .page-link[aria-label="First"],
+.hotel-pagination .pagination .page-item .page-link[aria-label="Last"] {
+    font-weight: bold;
+    color: #C19617;
+;
+}
+
+.hotel-pagination .pagination .page-item.disabled .page-link {
+    color: #888;
+}
+.hotel-pagination .pagination .page-item{
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.result-page{
+   
+font-size: 20px;
+font-weight: 400;
+line-height: 27px;
+text-align: right;
+color: #242424;
+
+}
     </style>
   </head>
 
@@ -467,16 +523,24 @@ background: rgba(193, 150, 23,0.3);
        
     <!-- Start hotels Section -->
     <div class="container">
-      <!-- Start breadcrumb -->
-      <nav aria-label="breadcrumb" class="mt-5">
-          <ol class="breadcrumb h-breadcrumb">
-              <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
-              <li class="breadcrumb-item"><a href="#">الفنادق</a></li>
-              <li class="breadcrumb-item active"><a href="#">الرياض</a></li>
-               
-          </ol>
-      </nav>
-      <!-- End breadcrumb -->
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <!-- Start breadcrumb -->
+            <nav aria-label="breadcrumb" >
+              <ol class="breadcrumb h-breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
+                  <li class="breadcrumb-item"><a href="#">الفنادق</a></li>
+                  <li class="breadcrumb-item active"><a href="#">الرياض</a></li>
+                  
+              </ol>
+          </nav>
+          <!-- End breadcrumb -->
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-end result-page">عرض 1–12 من 20 نتيجة</h3>
+        </div>
+
+      </div>
        <div class="row my-5">
         <div class="col-md-12">
           <section class="home-section">
@@ -2035,8 +2099,7 @@ background: rgba(193, 150, 23,0.3);
                         <span class="feature"><i class="fas fa-wifi"></i> WiFi</span>  
                         <span class="feature"><i class="fas fa-dumbbell"></i> مركز لياقة</span>  
                         <span class="feature"><i class="fas fa-parking"></i> كراج</span>
-                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
-                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
+                         
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -2102,8 +2165,7 @@ background: rgba(193, 150, 23,0.3);
                         <span class="feature"><i class="fas fa-wifi"></i> WiFi</span>  
                         <span class="feature"><i class="fas fa-dumbbell"></i> مركز لياقة</span>  
                         <span class="feature"><i class="fas fa-parking"></i> كراج</span>
-                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
-                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
+                     
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -2169,8 +2231,7 @@ background: rgba(193, 150, 23,0.3);
                         <span class="feature"><i class="fas fa-wifi"></i> WiFi</span>  
                         <span class="feature"><i class="fas fa-dumbbell"></i> مركز لياقة</span>  
                         <span class="feature"><i class="fas fa-parking"></i> كراج</span>
-                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
-                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
+                       
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -2236,8 +2297,7 @@ background: rgba(193, 150, 23,0.3);
                         <span class="feature"><i class="fas fa-wifi"></i> WiFi</span>  
                         <span class="feature"><i class="fas fa-dumbbell"></i> مركز لياقة</span>  
                         <span class="feature"><i class="fas fa-parking"></i> كراج</span>
-                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
-                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
+                         
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -2265,6 +2325,109 @@ background: rgba(193, 150, 23,0.3);
                  </div>
               </div>
             </div>
+          </div>
+          <div class="card hotel-card mb-3"  >
+            <div class="row g-0">
+              <div class="col-md-3">
+                <img src="images/popular-hotels/hotel.png" class="img-fluid   hotel-image" alt="Hotel Image"  >
+              </div>
+              <div class="col-md-9">
+                <div class="card-body">
+                  <div class="card-header">
+                    <div class="d-flex align-items-center  justify-content-between">
+                      <div class="hotel-title-section">
+                        <span class="hotel-name">يوضع هنا اسم الفندق</span>
+                      <span class="separator-line"></span>
+                      <span class="star-rating ml-2">★★★★☆</span>
+                      <span class="ml-3 text-muted">(584 مراجعة)</span>
+                      </div>
+                       
+                      <div class="hotel-price-section"> 
+                        <div class="price">
+                          <div class="price-section">SAR 5,965</div>
+                        <div class="availability">متاح بالأقساط</div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="card-text">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق</p>
+
+                  </div>
+                  <div class="row g-0">
+                    <div class="col-md-6">
+                      <div class="features  mt-3">
+                        <span class="feature"><i class="fas fa-swimming-pool"></i> بركة سباحة</span>  
+                        <span class="feature"><i class="fas fa-utensils"></i> مطعم</span>  
+                        <span class="feature"><i class="fas fa-wifi"></i> WiFi</span>  
+                        <span class="feature"><i class="fas fa-dumbbell"></i> مركز لياقة</span>  
+                        <span class="feature"><i class="fas fa-parking"></i> كراج</span>
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row g-0  buttons">
+                        <div class="col-lg-5 col-12">
+                          <p class="card-button mt-2">
+                            <a
+                              class="btn btn-main btn-sm xy-popularsearch"
+                              href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid="
+                              tabindex="-1">احجز معنا</a>
+                          </p>
+                        </div>
+                        <div class="col-lg-5 col-12">
+                          <p class="card-button mt-2">
+                            <a
+                              class="btn btn-secondary d-flex justify-content-center align-items-center gap-2"
+                              href="#"
+                              tabindex="-1">عرض التفاصيل</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   
+                 </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="hotel-pagination">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination  ">
+                  <li class="page-item">
+                      <a class="page-link" href="#" aria-label="First">
+                          ««
+                      </a>
+                  </li>
+                  <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                          «
+                      </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                   
+                  <li class="page-item"><a class="page-link" href="#">10</a></li>
+                  
+                  
+                  
+                  
+                  <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                          »
+                      </a>
+                  </li>
+                  <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Last">
+                          »»
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+          
           </div>
         </div>
     
