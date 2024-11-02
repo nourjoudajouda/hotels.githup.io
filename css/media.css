@@ -3,6 +3,7 @@
     /* smartphones and tablets -- min = 0 */
    .search-hotel{
         margin: 5px;
+        width: 98%;
     }
 
     .btns-popular   button{
