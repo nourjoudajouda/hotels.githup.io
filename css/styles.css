@@ -1377,3 +1377,46 @@ ul {
 .next {
   right: 0;
 }
+.btn-sub-room{
+  width: 100%;
+}
+.booking-room-option{
+  display: flex;
+  justify-content: space-between;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+/* Hide the original radio button */
+.booking-room-option input[type="radio"] {
+  display: none;
+}
+
+/* Style for the custom radio button */
+.booking-room-option .custom-radio {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #c19617;
+  /* Outer circle border color */
+  border-radius: 50%;
+  cursor: pointer;
+  top: 5px;
+}
+
+/* The inner circle when the radio button is checked */
+.booking-room-option input[type="radio"]:checked+.custom-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #c19617;
+  /* Inner circle color */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}

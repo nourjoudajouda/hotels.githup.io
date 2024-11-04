@@ -128,6 +128,7 @@
         <!-- End Navbar -->
         <hr style="margin-top:75px;">
 
+
         <div class="container">
             <!-- Start breadcrumb -->
             <nav aria-label="breadcrumb" class="mt-5">
@@ -578,7 +579,8 @@
                                             <p class="card-button mt-2">
                                                 <a
                                                     class="btn btn-main btn-sm xy-popularsearch w-100"
-                                                    href="https://booking.flynas.com/#/booking/search-redirect?origin=RUH&amp;destination=BAH&amp;origin1=undefined&amp;destination1=0&amp;currency=SAR&amp;departureDate=2024-10-04&amp;returnDate=null&amp;flightMode=oneway&amp;adultCount=1&amp;childCount=0&amp;infantCount=0&amp;culture=en-GB&amp;utm_source=&amp;tagtag_uid="
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#bookingroomModal"
                                                     tabindex="-1">احجز
                                                     الغرفة</a>
                                             </p>
@@ -1858,6 +1860,88 @@
                             <button form="inq-form" type="submit"
                                 class="btn btn-main btn-sm">
                                 استعلام
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Booking Room Modal -->
+            <div
+                class="modal fade"
+                id="bookingroomModal"
+                tabindex="-1"
+                aria-labelledby="bookingroomModal"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-accent"
+                                id="bookingroomModal">
+                                احجز غرفتك
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close text-accent"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form
+                                id="inq-form"
+                                action="https://gita.sa/pages/inquiry"
+                                method="GET">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <div class="booking-room-option">
+                                            <label>
+                                                <input type="radio" name="option" />
+                                                <span class="custom-radio"></span> إقامة فقط
+                                            </label>
+
+                                            
+                                            <h6
+                                                class="text-accent fw-bold">SAR
+                                                5.965</h6>
+ 
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="booking-room-option">
+                                             <label>
+                                                <input type="radio" name="option" />
+                                                <span class="custom-radio"></span> إقامةوإفطار 
+                                            </label>
+                                            
+                                            <h6
+                                                class="text-accent fw-bold">SAR
+                                                5.965</h6>
+ 
+                                        </div>
+
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <div class="booking-room-option">
+                                             <label>
+                                                <input type="radio" name="option" />
+                                                <span class="custom-radio"></span>سرير إضافي
+                                            </label>
+                                            <h6
+                                                class="text-accent fw-bold">SAR
+                                                5.965</h6>
+ 
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button form="inq-form" type="submit"
+                                class="btn btn-main btn-sm btn-sub-room">
+                                متابعة للدفع
                             </button>
                         </div>
                     </div>
