@@ -34,7 +34,7 @@ a {
   color: var(--green-color);
 }
 .section-padding {
-  padding: 120px 0;
+  padding-top: 300px;
 }
 .section-title {
   font-size: 40px;
@@ -199,18 +199,68 @@ a {
 }
 
 /* Start Navbar */
+.first-navbar{
+    /* position: fixed; */
+    /* height: 80px; */
+    /* left: 0;
+    right: 0; */
+    z-index: 1030;
+    padding-top: 0 !important;
+}
+.first-navbar .navbar-container {
+  width: 100%;
+  height: 90px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.first-navbar .navbar-brand {
+  display: inline-block;
+  height: 56px;
+}
+.first-navbar .navbar-brand img {
+  height: 100%;
+}
+.first-navbar .navbar-nav .nav-link {
+  color: #242424;
+  font-size: 24px;
+  font-weight: 700;
+}
+.first-navbar .offcanvas a:hover,
+.first-navbar .offcanvas a.active {
+  color: var(--main-color);
+}
+.first-navbar .header-icons i {
+  color: var(--black-color);
+  font-size: 24px;
+}
+.first-navbar .offcanvas .btn-close {
+  box-shadow: none;
+  width: 0.5em;
+  height: 0.5em;
+}
+.first-navbar .navbar-toggler {
+  border-color: #c8a235;
+  background: #c8a235;
+  cursor: pointer;
+}
+.first-navbar .navbar-toggler-icon {
+  background-image: url("../images/white-toggler-icon.svg");
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* End First Nav */
+
+
 .navbar {
-  position: fixed;
-  height: 80px;
-  left: 0;
-  right: 0;
-  z-index: 1030;
-  padding-top: 0 !important;
+    height: 80px;
+    padding-top: 10px !important
 }
 .navbar .navbar-container {
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(11px);
+  /* backdrop-filter: blur(11px); */
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -222,13 +272,13 @@ a {
   height: 100%;
 }
 .navbar .navbar-nav .nav-link {
-  color: #242424;
-  font-size: 24px;
+  color: #F7F7F7;
+  font-size: 20px;
   font-weight: 700;
 }
 .navbar .offcanvas a:hover,
 .navbar .offcanvas a.active {
-  color: var(--main-color);
+  color: #F7F7F7;
 }
 .navbar .header-icons i {
   color: var(--black-color);
@@ -273,19 +323,29 @@ a {
 
 /*  Start Home Section */
 .home-section {
-  background-image: url("../images//backgrounds/home-header.png");
-  height: calc(100vh - 80px);
+  background-image: url("../images//backgrounds/image\ 9.png");
+  height: calc(170vh - 80px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 50px;
+}
+.bg-linear-gradient {
+  background: linear-gradient(#32988ACC, #32988A66);
+  height: calc(170vh - 80px);
+  padding-bottom: 50px;
+}
+.bg-linear-gradient-content {
+  background: linear-gradient(#32988ACC, #32988A66);
+  min-height: calc(140vh - 80px);
+  padding-bottom: 168px;
 }
 .home-section .home-text {
   padding-top: 70px;
   color: var(--white-color);
 }
 .home-section .home-text h1 {
-  font-size: 100px;
+  font-size: 50px;
 }
 .home-section .home-text h1 span {
   color: var(--dark-color);
@@ -364,16 +424,12 @@ a {
 
 /* Statr Features Section */
 .features-section {
-  background-image: url("../images/backgrounds/features-section.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 100px;
-  padding: 50px 0;
+  margin-top: 50px;
+  position: relative;
 }
 .features-section .swiper-features {
   position: relative;
-  height: 350px;
+  min-height: 720px;
 }
 .slider-heading {
   display: flex;
@@ -383,7 +439,7 @@ a {
 .features-section .swiper-button-next,
 .features-section .swiper-button-prev {
   position: static !important;
-  border: 1px solid var(--main-color);
+  border: 1px solid #00806e;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -394,8 +450,8 @@ a {
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  background: var(--main-color); /* Remove default background */
-  color: var(--main-color) !important;
+  background: #00806e; /* Remove default background */
+  color: #F7F7F7 !important;
 }
 .features-section .swiper-button-next::after,
 .features-section .swiper-button-prev::after {
@@ -407,15 +463,13 @@ a {
   max-height: 170px;
   width: 100%;
 }
-.features-section .swiper-features .swiper-slide img {
+.features-section .swiper-features .swiper-slide .feature-img {
   width: 100%;
   height: 100%;
   border-radius: 12px !important;
   transition: transform 0.4s ease-in-out;
 }
-.features-section .swiper-slide:hover img {
-  transform: scale(1.05);
-}
+
 @media (max-width: 991px) {
   .features-section {
     margin-top: 0;
@@ -513,7 +567,7 @@ a {
   min-height: 510px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0px 0px 25px #e2e2e2;
+  /* box-shadow: 0px 0px 25px #e2e2e2; */
 }
 /* End Popular Hotels */
 /* Start first know Section */
@@ -676,8 +730,13 @@ a {
 
 /* Start footer Section */
 footer {
-  background-color: var(--bg-light);
-  color: #303030;
+  background-color: var(--main-color);
+  color: #F7F7F7;
+  position: absolute;
+  top: 450px;
+  width: 100%;
+  z-index: -1;
+  min-height: 400px;
 }
 footer h4 {
   margin-bottom: 20px;
@@ -696,7 +755,8 @@ footer ul li a:hover {
 }
 footer ul li a i {
   margin-left: 10px;
-  color: var(--main-color);
+  color:#F7F7F7;
+  font-size: 25px;
 }
 footer .media .media-body h5,
 footer .media .media-body p {
@@ -706,8 +766,8 @@ footer .media .media-body p {
 
 /* Start Copy Right */
 .copyright {
-  background-color: var(--bg-light);
-  color: #303030;
+  background-color:none;
+  color: #F7F7F7;
 }
 .copyright .container {
   border-top: 1px solid #ecdeb7;
@@ -717,10 +777,10 @@ footer .media .media-body p {
   margin-left: 10px;
 }
 .footer-social ul li a {
-  color: var(--main-color);
+  color: #F7F7F7;
 }
 .footer-social ul li a:hover {
-  color: var(--main-color);
+  color:#F7F7F7;
 }
 @media (max-width: 768px) {
   .copyright p {
@@ -1176,247 +1236,129 @@ ul {
 }
 /* end selector ox in the filter  */
 
-/* Start Hotel Page */
 
-/* Start breadcrumb*/
-.h-breadcrumb .breadcrumb-item a {
-  color: var(--dark-color);
+/* Start Style New Landing Page */
+.static-nav{
+  display: contents;
 }
-.breadcrumb-item+.breadcrumb-item::before {
-  color: var(--dark-color);
-}
-/* End breadcrumb */
-
-/* Start Gallary */
-.gallary img{
-  padding-bottom: 20px;
-}
-/* End Gallary */
-
-/* Start Details Hotel */
-.rating span{
-  letter-spacing: 1px;
-}
-.description-hotel p{
-  text-align: justify;
-}
-.feature-hotel{
-  background-color: #f9f5eb;
-  text-align: center;
-  padding: 10px;
-  border-radius: 8px;
-  height: 80px;
-}
-.search-hotel{
-    background-color: #f9f5eb;
-    min-height: 200px;
-    margin-top: 30px;
-    border: 2px solid #008270;
+.block-date{
+    border: 1px solid #fff;
     border-radius: 8px;
-    padding: 15px;
-
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
-.feature-hotel h6{
-  font-size: 14px;
+.block-date-active{
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: var(--main-color);
 }
-.share-icon{
-  background-color: #f9f5eb;
-  padding: 5px;
-  border-radius: 5px;
+.block-date h6 ,  .block-date-active h6{
+  font-size: 18px;
 }
-/* End Details Hotel */
-
-
-/* Start suitable-option*/
-.suitable-option .card {
-  min-height: 500px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0px 0px 25px #e2e2e2;
+.fa-magnifying-glass{
+  color: #008270;
 }
-.features-room h6{
-  font-size: 14px;
-}
-/* End suitable-option */
-
-/* Start places */
-.places .input-group {
-  border-radius: 25px;
+.input-group input{
+  border: 0px;
+  background-color: #F7F7F7;
   height: 50px;
-}
-.info-place{
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-/* End place */
+  border-top-right-radius: 5px !important; 
+  border-bottom-right-radius: 5px !important;
 
-/* Start Collapse */
-.accordion-header{
-  background: #0082700D
 }
-.Questions .accordion-item .accordion-body {
-  color: #5B5B5BCC;
+.input-group span{
+  border:0px;
+  background-color: #F7F7F7;
+  border-top-left-radius: 5px !important; 
+  border-bottom-left-radius: 5px !important;
 }
-
-.Questions button{
-    display: flex;
-    justify-content: space-between;
+.dropdown-home{
+  width: 100%;
+  background:none;
+  border: 1px solid #F7F7F7;
+  border-radius: 5px;
+  color: #fff;
+  height: 50px;
+  padding: 5px;
 }
-
-.e-q h4{
-  color: #c19617;
+.home-section hr{
+  color: #F7F7F7;
+  margin: 5px;
 }
-.e-q .input-group{
-  height: 70px;
+.popular-hotels{
+  position: relative;
+  top: -450px;
+  height: 500px;
 }
-
-.e-q input {
-  background-color: #00000014;
-  height: 70px;
-  opacity: 40%;
-  border-radius: 0px 10px 10px 0px !important;
-}
-.e-q .input-group-text {
-  border-radius: 10px 0px 0px 10px !important;
+.popular-hotels .btn ,.about-us .btn ,.gallary  .btn ,.features-section .btn{
+  border-radius: 25px !important;
 }
 
-.accordion-button::after {
-  flex-shrink: 0;
-  width: var(--bs-accordion-btn-icon-width);
-  height: var(--bs-accordion-btn-icon-width);
-  margin-left: 0px;
-  margin-right: 0px;
-  content: "";
-  background-image: var(--bs-accordion-btn-icon);
-  background-repeat: no-repeat;
-  background-size: var(--bs-accordion-btn-icon-width);
-  transition: var(--bs-accordion-btn-icon-transition);
-}
-.btn-send {
-  background-color: var(--main-color) !important;
-  color: var(--white-color) !important;
-}
-/* End Collapse */
-
-/* Start preview Images */
-.gallery {
-  display: flex;
-  gap: 10px;
-}
-
-.gallery-item {
-  width: 200px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.gallery-item:hover {
-  transform: scale(1.05);
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
+.img-about-us img{
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 15px;
 }
-
-.lightbox-content {
-  position: relative;
-  margin: auto;
-  padding: 20px;
-  max-width: 80%;
+.heading-gallary{
+  color: var(--main-color);
 }
-
-.mySlides {
-  display: none;
+.heading-activities{
+  color: var(--main-color);
+}
+.bg-activities{
+    background-image: url("../images/backgrounds/image\ 7.png");
+    height: calc(75vh - 80px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+.bg-linear-gradient-activities{
+    background: linear-gradient( #BE910C99 ,#BE910C1A);
+    height: calc(75vh - 80px);
+    margin-top: 15px;
+    border-radius: 20px;
+}
+.content-activities{
   text-align: center;
+  padding: 100px; 
 }
-
-.mySlides  img {
-  max-width: 100%;
-  height: auto;
-  width: 70%;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  color: white;
-  font-size: 35px;
+.content-activities h3{
+  color: #008270;
+  margin-bottom: 30px;
   font-weight: bold;
-  cursor: pointer;
 }
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  transform: rotate(180deg);
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-.btn-sub-room{
+.dropdown-activities{
   width: 100%;
+  background:#F7F7F7;
+  border: 1px solid #F7F7F7;
+  border-radius: 5px;
+  color: #4D4D4D;
+  height: 60px;
+  padding: 5px;
 }
-.booking-room-option{
-  display: flex;
-  justify-content: space-between;
-  background: #f7f7f7;
-  padding: 20px;
-  border-radius: 8px;
+.date-activities{
+    background-color: #008270;
+    color: #fff;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    border-radius: 50%;
+    padding: 13px;
+    font-size: 16px;
+    border: 1px solid #c19617;
 }
-
-
-/* Hide the original radio button */
-.booking-room-option input[type="radio"] {
-  display: none;
-}
-
-/* Style for the custom radio button */
-.booking-room-option .custom-radio {
+.block-img-activities{
   position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #c19617;
-  /* Outer circle border color */
-  border-radius: 50%;
-  cursor: pointer;
-  top: 5px;
 }
-
-/* The inner circle when the radio button is checked */
-.booking-room-option input[type="radio"]:checked+.custom-radio::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px;
-  height: 12px;
-  background-color: #c19617;
-  /* Inner circle color */
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
+/* End Style New Landing Page */
